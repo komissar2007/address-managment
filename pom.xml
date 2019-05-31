@@ -33,14 +33,12 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.8</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-mongodb</artifactId>
-			<version>2.1.0.RELEASE</version>
-		</dependency>
+			</dependency>
 	</dependencies>
 
 	<build>
@@ -54,8 +52,9 @@
 				<artifactId>dockerfile-maven-plugin</artifactId>
 				<configuration>
 					<repository>slavarub/address-management</repository>
+					<username>slavarub</username>
+					<password>slava100</password>
 					<tag>${project.version}</tag>
-					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
 					<buildArgs>
 						<JAR_FILE>target/${project.build.name}.jar</JAR_FILE>
 					</buildArgs>
